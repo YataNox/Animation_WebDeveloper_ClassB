@@ -18,10 +18,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>02_Transform_Tanslate</title>
+    <style>
+        .origin{
+            width: 200px; height: 134px; border: 1px solid black;
+            float: left; margin: 40px;
+        }
+        .movex{transition: 1s;}
+        .movey{transition: 1s;}
+        .movexy{transition: 1s;}
+        /* transition-duration에서 duration은 생략 가능합니다. */
+        .movex:hover{
+            transform:translateX(50px);
+            /* Left 값이나 top 값의 변형을 적용하여도 똑같지만, 이들은 절대 좌표에 의해 움직이며,
+            translateX는 상대적 좌표이동이 적용됩니다. */
+            /* -webkit-transform: translate(50px);
+            -ms-transform: translate(50px);
+            -moz-transform: translate(50px);
+            -o-transform: translate(50px); */
+        }
+        .movey:hover{
+            transform:translateY(50px);
+           
+        }
+        .movexy:hover{
+            transform:translate(50px, 50px);
+        }
+    </style>
 </head>
 <body>
     <div class="origin">
-        <div class="movey">
+        <div class="movex">
             <img src="images/bus.jpg">
         </div>
     </div>
@@ -31,7 +57,7 @@
         </div>
     </div>
     <div class="origin">
-        <div class="movey">
+        <div class="movexy">
             <img src="images/bus.jpg">
         </div>
     </div>
