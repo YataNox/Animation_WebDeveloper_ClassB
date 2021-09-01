@@ -14,6 +14,7 @@
             position: relative; 
             width: 600px; height: 600px; 
             margin: 0 auto; border: 1px dashed red;
+            overflow: hidden;
         }
         .prod_img{
             position: absolute;
@@ -26,10 +27,15 @@
             line-height: 400px;
             text-align: center;
         }
-        img{
-            width: 200px;
-            height: 200px;
-            border-radius: 50%; 
+        .box2{
+            position: absolute;
+            width: 600px; height: 400px;
+            left: -600px; top: 0;
+            transition-duration: 1s;
+        }
+        .big_img img{
+            position: absolute;
+            z-index: 10;
         }
         .box1{
             position: absolute;
@@ -39,6 +45,9 @@
         #btn_img1{left:0px}
         #btn_img2{left:200px}
         #btn_img3{left:400px}
+        #btn_img1:hover~#img1{left: 0px;}
+        #btn_img2:hover~#img2{left: 0px;}
+        #btn_img3:hover~#img3{left: 0px;}
     </style>
 </head>
 <body>
@@ -49,7 +58,9 @@
         <div class="box1" id="btn_img1"><img src="images/prod1.jpg" width="198px" height="198px"></div>
         <div class="box1" id="btn_img2"><img src="images/prod2.jpg" width="198px" height="198px"></div>
         <div class="box1" id="btn_img3"><img src="images/prod3.jpg" width="198px" height="198px"></div>
-       
+        <div class="box2" id="img1"><img src="images/prod1.jpg" width="600px" height="400px"></div>
+        <div class="box2" id="img2"><img src="images/prod2.jpg" width="600px" height="400px"></div>
+        <div class="box2" id="img3"><img src="images/prod3.jpg" width="600px" height="400px"></div>
     </div>
 </body>
 </html>
