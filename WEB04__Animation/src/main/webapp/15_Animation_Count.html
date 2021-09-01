@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>15_Animaion_Count.html</title>
+        <style>
+            #a{
+                margin-top: 50px;
+                margin-left: 100px;
+                padding: 20px;
+                width: 200px;   height: 60px;
+                border: 1px solid black;
+                animation-name: moving;
+                animation-duration: 1.5s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+            }
+            @keyframes moving{
+                from{
+                    background-color: #FAEF7C;
+                    opacity: 0.5;
+                    transform: scaleY(0.5) rotate(15deg);
+                }
+                to{
+                    width: 400px;
+                    background-color: #FF9400;
+                    opacity: 1;
+                    transform: scale(1) rotate(0deg);
+                }
+            }
+            /* animation-iteration-count: 애니메이션 반복 횟수. 숫자를 쓰면 그 횟수만큼 반복,
+            infinite를 쓰면 무한 반복.
+            animation-direction: 애니메이션의 진행 방향.
+            지정이 안되어 있으면 정방향(from -> to),
+            animation-direction:reverse 역방향(to -> from)
+            animation-direction:alternate 정방향 한 번 역방향 한 번 번갈아 진행 */
+        </style>
+    </head>
+    <body>
+        <div id="a">
+            <h3>CSS3 Animation</h3>
+        </div>
+    </body>
+</html>
