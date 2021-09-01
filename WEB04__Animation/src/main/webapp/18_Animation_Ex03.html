@@ -21,14 +21,14 @@
             @keyframes moving{
                 from{
                     background-color: red;
-                    transform: rotateY(0deg);
+                    transform: rotateX(0deg) rotateY(0deg);
                 }
                 50%{
                     background-color: green;
-                    transform: rotateX(-180deg);
+                    transform: rotateX(-180deg) rotateY(0deg);
                 }
                 to{
-                    transform: rotateX(-180deg) roateY(-180deg);
+                    transform: rotateX(-180deg) rotateY(-180deg);
                     background-color: blue;
                 }
             }
