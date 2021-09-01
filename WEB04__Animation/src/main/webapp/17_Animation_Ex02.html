@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>17_Animation_Ex02.html</title>
+        <style>
+            #a{
+                position: relative;
+                margin-top: 50px;
+                padding-left: 20px;
+                width: 600px;   height: 80px;
+                border: 1px solid black;
+                animation-name: moving;
+                animation-duration: 2s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+                background-color: #FF9400;
+                transform-origin: right;
+            }
+            @keyframes moving{
+                from{
+                    transform: rotateY(0deg);
+                    perspective: 1000px;
+                }
+                to{
+                    transform: rotateY(180deg);
+                    perspective: 1000px;
+                }
+            }
+            /* animation-iteration-count: 애니메이션 반복 횟수. 숫자를 쓰면 그 횟수만큼 반복,
+            infinite를 쓰면 무한 반복.
+            animation-direction: 애니메이션의 진행 방향.
+            지정이 안되어 있으면 정방향(from -> to),
+            animation-direction:reverse 역방향(to -> from)
+            animation-direction:alternate 정방향 한 번 역방향 한 번 번갈아 진행 */
+        </style>
+    </head>
+    <body>
+        <div id="a">
+            <h1>CSS3 Animation</h1>
+        </div>
+    </body>
+</html>
