@@ -21,12 +21,10 @@
             }
             @keyframes moving{
                 from{
-                    transform: rotateY(0deg);
-                    perspective: 1000px;
+                    transform: perspective(1000px) rotateY(0deg);
                 }
                 to{
-                    transform: rotateY(180deg);
-                    perspective: 1000px;
+                    transform: perspective(1000px) rotateY(180deg);
                 }
             }
         </style>
