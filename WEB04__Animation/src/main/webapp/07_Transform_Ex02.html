@@ -21,13 +21,12 @@
 			}
 			.submenuall
 			{
-				width : 100%; height: 2px; background:#595959;
-				border : 1px solid red;
+				width : 100%; height: 1px; background:red;
                 transition-duration: 1s;
             }
             .menuall:hover+.submenuall{
-                height: 100px;
-                transition-duration: 1s;}
+                transform-origin: top; transform: scaleY(100);
+            }
     </style>
 </head>
 <body>
@@ -57,7 +56,7 @@
         <div id = "menu5" class = "menuall">
             <h2>CONTACT</h2>
         </div>
-        <div id = "submenu5" class = "submenuall"></div><!-- ? -->
+        <div id = "submenu5" class = "submenuall"></div>
     </div>
 </body>
 </html>
